@@ -1,0 +1,1 @@
+@echo & t:/ai_play_chess/venv/Scripts/python.exe t:/ai_play_chess/train.py
