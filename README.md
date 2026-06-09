@@ -2,6 +2,7 @@
 
 Dự án AI chơi cờ vua kết hợp giữa các phương pháp lập trình cờ vua truyền thống (Minimax, Alpha-Beta Pruning, Bảng giá trị vị trí - PST) và các kỹ thuật Học sâu hiện đại (Neural Network, Monte Carlo Tree Search - MCTS). Đặc biệt, Bot có khả năng đọc trực tiếp trạng thái bàn cờ từ trang chess.com để hỗ trợ hoặc tự động chơi.
 
+![Giao diện Trợ lý AI Cờ Vua](assets/gui_screenshot.png)
 ## 🌟 Tính năng nổi bật
 
 - **Hybrid AI Engine:** Kết hợp Mạng Nơ-ron và MCTS để đánh giá chiến lược dài hạn, đồng thời dùng Minimax (Negamax) với Alpha-Beta Pruning để tính toán chính xác các chiến thuật (tactics) trong ngắn hạn.
@@ -29,30 +30,45 @@ ai_play_chess/
 
 ## 🚀 Hướng dẫn Cài đặt & Sử dụng
 
-### Yêu cầu hệ thống
-- Python 3.8+
-- Môi trường ảo (Virtual Environment) đã được thiết lập sẵn trong thư mục `venv`.
+### 1. Yêu cầu hệ thống
+- Cài đặt sẵn **Python 3.8+** trên máy.
+- *Khuyến nghị:* Máy có GPU (NVIDIA) và cài đặt PyTorch hỗ trợ CUDA để AI tính toán nhanh hơn.
 
-### Các thư viện chính (Dependencies)
-Dự án yêu cầu cài đặt các thư viện sau:
-- `torch` (PyTorch - Có hỗ trợ CUDA nếu có GPU sẽ tối ưu tốc độ)
-- `chess` (python-chess)
-- `numpy`
+### 2. Thiết lập Môi trường & Cài đặt Thư viện
+Mở Terminal / Command Prompt tại thư mục dự án và chạy lần lượt các lệnh sau:
 
-### Khởi chạy dự án
+**Bước 1: Tạo môi trường ảo (Virtual Environment)**
+```bash
+python -m venv venv
+```
 
-**1. Khởi chạy Bot qua Giao diện (GUI):**
-Cách đơn giản nhất trên Windows là click đúp vào file `run_bot.bat`. Script này sẽ kích hoạt môi trường ảo và chạy `gui.py`.
-Hoặc chạy trực tiếp qua Command Line:
+**Bước 2: Kích hoạt môi trường ảo**
+- Trên **Windows**:
 ```bash
 venv\Scripts\activate
+```
+- Trên **macOS / Linux**:
+```bash
+source venv/bin/activate
+```
+
+**Bước 3: Cài đặt các thư viện cần thiết**
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Khởi chạy Dự án
+
+Để bắt đầu sử dụng Giao diện Trợ lý AI (GUI), hãy đảm bảo môi trường ảo đang được kích hoạt và chạy lệnh:
+```bash
 python gui.py
 ```
 
-**2. Huấn luyện lại Model:**
-Chạy file `training.bat` hoặc lệnh:
+*(Mẹo cho Windows: Các lần sử dụng sau, bạn chỉ cần click đúp thẳng vào file `run_bot.bat` để phần mềm tự động bật).*
+
+**Huấn luyện lại Model (Tùy chọn):**
+Nếu bạn muốn huấn luyện AI học thêm từ các ván đấu, chạy file `training.bat` hoặc lệnh:
 ```bash
-venv\Scripts\activate
 python train.py
 ```
 
