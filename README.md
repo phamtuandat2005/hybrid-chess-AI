@@ -2,7 +2,7 @@
 
 Dự án AI chơi cờ vua kết hợp giữa các phương pháp lập trình cờ vua truyền thống (Minimax, Alpha-Beta Pruning, Bảng giá trị vị trí - PST) và các kỹ thuật Học sâu hiện đại (Neural Network, Monte Carlo Tree Search - MCTS). Đặc biệt, Bot có khả năng đọc trực tiếp trạng thái bàn cờ từ trang chess.com để hỗ trợ hoặc tự động chơi.
 
-![Giao diện Trợ lý AI Cờ Vua](assets/gui_screenshot.png)
+![Giao diện Trợ lý AI Cờ Vua](assets/gui.png)
 ## 🌟 Tính năng nổi bật
 
 - **Hybrid AI Engine:** Kết hợp Mạng Nơ-ron và MCTS để đánh giá chiến lược dài hạn, đồng thời dùng Minimax (Negamax) với Alpha-Beta Pruning để tính toán chính xác các chiến thuật (tactics) trong ngắn hạn.
