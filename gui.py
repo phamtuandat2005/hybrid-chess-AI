@@ -68,6 +68,9 @@ class ChessApp:
         self.root.resizable(False, False)
         self.root.configure(bg="#1a1a2e")
 
+        if os.path.exists("assets/logo.ico"):
+            self.root.iconbitmap("assets/logo.ico")
+
         self.driver  = None
         self.running = False
         self._build_ui()
