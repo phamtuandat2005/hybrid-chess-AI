@@ -12,6 +12,17 @@ import sys
 import subprocess
 import os
 import traceback
+import io
+
+class SafeStdout(io.StringIO):
+    def reconfigure(self, *args, **kwargs):
+        pass  # Bỏ qua không làm gì cả khi gọi hàm này
+
+# Nếu chạy ở chế độ ẩn CMD (--windowed), sys.stdout sẽ là None
+if sys.stdout is None:
+    sys.stdout = SafeStdout()
+if sys.stderr is None:
+    sys.stderr = SafeStdout()
 
 # --- Helper dịch nước cờ sang Tiếng Việt ---
 def translate_move(board, move):
